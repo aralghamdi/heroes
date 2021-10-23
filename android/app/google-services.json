@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "882481672025",
+    "project_id": "unishf-heroes",
+    "storage_bucket": "unishf-heroes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882481672025:android:7859d6a95cfad51b2fe648",
+        "android_client_info": {
+          "package_name": "com.example.heroes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882481672025-h9mfh9j4r1qmq27lmrgrsn9avrgu18ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-AFkpDuauIe5nYm8a9eA9OG616l3cJTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882481672025-h9mfh9j4r1qmq27lmrgrsn9avrgu18ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
