@@ -24,7 +24,7 @@ class FireStoreDB {
 
       return _heroes;
     } catch (e) {
-      return Exception(e);
+      throw Exception(e);
     }
   }
 

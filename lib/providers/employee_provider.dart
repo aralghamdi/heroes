@@ -17,7 +17,7 @@ class EmployeeProvider extends  ChangeNotifier{
       case 'name':
         _heroes.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
         break;
-      case 'powers':
+      case 'power':
         _heroes.sort((a, b) => b.powers.length.compareTo(a.powers.length));
         break;
       default:
