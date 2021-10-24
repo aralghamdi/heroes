@@ -2,30 +2,35 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:heroes/models/employee_model.dart';
 
 
-Stream collectionStream = FirebaseFirestore.instance.collection('heroes').snapshots();
+/// declare Employees Collection reference in FireStore DB
+var employeeCollection = FirebaseFirestore.instance.collection('employees');
 
 class FireStoreDB {
 
-
   static Future fetchEmployees() async {
-    List<Employee> _heroes = [];
+    List<Employee> _employees = [];
 
     try {
-      QuerySnapshot<Map<String, dynamic>> heroes =
-      await FirebaseFirestore.instance.collection('employees').get();
+      /// Get the employees list from FireStore DB
+      QuerySnapshot<Map<String, dynamic>> heroes = await employeeCollection.get();
 
-      _heroes = [];
+      /// add the data to temp employee list
+      for (var hero in heroes.docs) {
+        _employees.add(Employee.fromJson(hero));
+      }
 
-      heroes.docs.forEach((hero) {
-        _heroes.add(Employee.fromJson(hero));
-      });
+      /// sort the list alphabetically
+      _employees.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
 
-      _heroes.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-
-      return _heroes;
+      return _employees;
     } catch (e) {
       throw Exception(e);
     }
+  }
+
+  static Future<void> updateEmployeeRate({required String employeeID, required int rate}) {
+    /// update employee rating in FireStore DB using employee ID
+    return employeeCollection.doc(employeeID).update({'rate': rate});
   }
 
 }

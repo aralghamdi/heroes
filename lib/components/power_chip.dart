@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
+
+///
+/// This widget will be used in All Hero Screen & Hero profile Screen,
+/// it will display the power of the hero as chip shape
+///
+
 class PowerChip extends StatelessWidget {
   final String power;
-  double fontSize;
-  PowerChip({Key? key, required this.power, this.fontSize = 12}) : super(key: key);
+  const PowerChip({Key? key, required this.power}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class PowerChip extends StatelessWidget {
         color: const Color(0xff5B628F),
       ),
       child: Text(power,
-        style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w300, color: Colors.white),),
+        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300, color: Colors.white),),
     );
   }
 }

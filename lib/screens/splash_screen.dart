@@ -1,8 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:heroes/components/size_config.dart';
 import 'all_heroes_screen.dart';
 
+///
+/// This is the splash screen of the app
+///
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -18,7 +22,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     ///
     /// While the Splash screen is running,
-    /// This code will connect to FireStore
+    /// This code will initialize connection to the FireStore DB
     ///
     Firebase.initializeApp().then((value) async {
       Navigator.of(context).pushReplacement( MaterialPageRoute(
@@ -29,7 +33,7 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-
+    SizeConfig().init(context);
     return Scaffold(
       body: Center(
         child: Container(
@@ -43,7 +47,9 @@ class _SplashState extends State<Splash> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                   SizedBox()
+                    Image(
+                      image: const AssetImage('assets/images/unishf-logo.png'),
+                      width: SizeConfig.blockSizeHorizontal! * 50,),
                   ],
                 ),
               ),
