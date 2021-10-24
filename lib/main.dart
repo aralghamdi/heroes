@@ -6,11 +6,14 @@ import 'screens/splash_screen.dart';
 
 void main() {
   runApp(
+    ///
+    /// Initializes the app Providers.
+    ///
+    ///
       MultiProvider(providers: [
         ChangeNotifierProvider<EmployeeProvider>(create: (context) => EmployeeProvider())
       ],
           child:const HeroesApp()));
-
 }
 
 class HeroesApp extends StatelessWidget {

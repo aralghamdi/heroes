@@ -4,13 +4,10 @@ U.N.I.S.H.F's Heros managment app
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is developed as part of Sary's interview process.
 
-A few resources to get you started if this is your first Flutter project:
+The data displayed in the app is fetched from Firebase and requires an internet connection,
+Before running the app, please make sure your device is connected to the internet.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Note that this app has not been tested on an iOS device. Please use an Android device or Emulator to run the app.
